@@ -4,128 +4,237 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy – Nick Khapatniukovskyi</title>
+  <meta name="description" content="Privacy policy for apps by Nick Khapatniukovskyi." />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                   Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #1a1a1a;
-      background: #fff;
-      padding: 2rem 1rem 4rem;
+    :root {
+      --navy: #26374A;
+      --blue: #2B59D1;
+      --bg: #FAF9F5;
+      --ink: #333333;
+      --muted: #7D828B;
+      --line: #D6D9DD;
+      --surf: #FFFFFF;
     }
-
-    .container {
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --navy: #2E4566;
+        --blue: #6FA3FF;
+        --bg: #0F1419;
+        --ink: #E8EAED;
+        --muted: #8E94A0;
+        --line: #2C3543;
+        --surf: #1A2330;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: var(--navy);
+      color: #FFFFFF;
+      padding: 40px 20px 32px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 6px; font-size: 28px; font-weight: 700; }
+    header p { margin: 0; opacity: 0.85; font-size: 16px; }
+    .lang-toggle {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-size: 13px;
+    }
+    .lang-toggle a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      padding: 4px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+    }
+    .lang-toggle a:hover { background: rgba(255, 255, 255, 0.1); }
+    [lang="fr"] { display: none; }
+    body.fr [lang="en"] { display: none; }
+    body.fr [lang="fr"] { display: block; }
+    body.fr span[lang="fr"] { display: inline; }
+    main {
       max-width: 680px;
       margin: 0 auto;
+      padding: 32px 20px 80px;
     }
-
-    header {
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 1.25rem;
-      margin-bottom: 2rem;
-    }
-
-    header h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
     .effective-date {
-      margin-top: 0.35rem;
       font-size: 0.875rem;
-      color: #666;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
     }
-
     .intro {
       margin-bottom: 2rem;
-      color: #333;
     }
-
     section {
       margin-bottom: 1.75rem;
     }
-
     section h2 {
       font-size: 1rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: #111;
+      color: var(--ink);
     }
-
     section p {
-      color: #333;
+      color: var(--ink);
+      opacity: 0.9;
     }
-
     footer {
-      margin-top: 3rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid #e5e5e5;
-      font-size: 0.8rem;
-      color: #888;
+      text-align: center;
+      padding: 24px 20px 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
     }
+    footer a { color: var(--muted); }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
+  <header style="position: relative;">
+    <div class="lang-toggle">
+      <a href="#" onclick="toggleLang(); return false;" id="langLink">Français</a>
+    </div>
+    <span lang="en">
       <h1>Privacy Policy</h1>
+      <p>Nick Khapatniukovskyi</p>
+    </span>
+    <span lang="fr">
+      <h1>Politique de confidentialité</h1>
+      <p>Nick Khapatniukovskyi</p>
+    </span>
+  </header>
+
+  <main>
+
+    <!-- ── ENGLISH ─────────────────────────────────────────────────────── -->
+    <div lang="en">
       <p class="effective-date">Effective Date: May 7, 2026</p>
-    </header>
 
-    <p class="intro">
-      This privacy policy applies to all apps published by <strong>Nick Khapatniukovskyi</strong>.
-      All apps are provided as free services and are intended for use "as is."
-    </p>
-
-    <section>
-      <h2>1. Data Collection and Usage</h2>
-      <p>
-        I do not collect, log, or share any personal information or user data.
-        No account registration is required to use any of the apps, and no
-        personal identifiers are requested.
+      <p class="intro">
+        This privacy policy applies to all apps published by <strong>Nick Khapatniukovskyi</strong>.
+        All apps are provided as free services and are intended for use "as is."
       </p>
-    </section>
 
-    <section>
-      <h2>2. Data Storage</h2>
-      <p>
-        All app progress, quiz results, and user settings are stored locally on
-        your device. This data is never transmitted to external servers or third
-        parties. If you delete an app, its locally stored data will be removed.
+      <section>
+        <h2>1. Data Collection and Usage</h2>
+        <p>
+          I do not collect, log, or share any personal information or user data.
+          No account registration is required to use any of the apps, and no
+          personal identifiers are requested.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Data Storage</h2>
+        <p>
+          All app progress, quiz results, and user settings are stored locally on
+          your device. This data is never transmitted to external servers or third
+          parties. If you delete an app, its locally stored data will be removed.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Third-Party Services</h2>
+        <p>
+          These apps do not use third-party tracking, analytics, or advertising SDKs.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. No Subscriptions or Ads</h2>
+        <p>
+          All apps are passion projects created for educational purposes. They contain
+          no advertisements and require no subscriptions or in-app purchases.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Contact</h2>
+        <p>
+          If you have any questions or suggestions about this Privacy Policy, do not
+          hesitate to contact me through the relevant app's repository or developer
+          contact information.
+        </p>
+      </section>
+    </div>
+
+    <!-- ── FRENCH ──────────────────────────────────────────────────────── -->
+    <div lang="fr">
+      <p class="effective-date">Date d'entrée en vigueur : 7 mai 2026</p>
+
+      <p class="intro">
+        Cette politique de confidentialité s'applique à toutes les applications publiées par <strong>Nick Khapatniukovskyi</strong>.
+        Toutes les applications sont fournies gratuitement et sont destinées à être utilisées « telles quelles ».
       </p>
-    </section>
 
-    <section>
-      <h2>3. Third-Party Services</h2>
-      <p>
-        These apps do not use third-party tracking, analytics, or advertising SDKs.
-      </p>
-    </section>
+      <section>
+        <h2>1. Collecte et utilisation des données</h2>
+        <p>
+          Je ne collecte, n'enregistre ni ne partage aucune information personnelle ou donnée utilisateur.
+          Aucune inscription n'est requise pour utiliser les applications, et aucun identifiant personnel n'est demandé.
+        </p>
+      </section>
 
-    <section>
-      <h2>4. No Subscriptions or Ads</h2>
-      <p>
-        All apps are passion projects created for educational purposes. They contain
-        no advertisements and require no subscriptions or in-app purchases.
-      </p>
-    </section>
+      <section>
+        <h2>2. Stockage des données</h2>
+        <p>
+          Toute la progression, les résultats des quiz et les paramètres utilisateur sont stockés localement sur votre appareil.
+          Ces données ne sont jamais transmises à des serveurs externes ni à des tiers.
+          Si vous supprimez une application, les données stockées localement seront effacées.
+        </p>
+      </section>
 
-    <section>
-      <h2>5. Contact</h2>
-      <p>
-        If you have any questions or suggestions about this Privacy Policy, do not
-        hesitate to contact me through the relevant app's repository or developer
-        contact information.
-      </p>
-    </section>
+      <section>
+        <h2>3. Services tiers</h2>
+        <p>
+          Ces applications n'utilisent aucun SDK de suivi, d'analyse ou de publicité tiers.
+        </p>
+      </section>
 
-    <footer>
-      &copy; 2026 Nick Khapatniukovskyi. All rights reserved.
-    </footer>
-  </div>
+      <section>
+        <h2>4. Pas d'abonnements ni de publicités</h2>
+        <p>
+          Toutes les applications sont des projets passionnels créés à des fins éducatives.
+          Elles ne contiennent aucune publicité et ne nécessitent aucun abonnement ni achat intégré.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Contact</h2>
+        <p>
+          Si vous avez des questions ou des suggestions concernant cette politique de confidentialité,
+          n'hésitez pas à me contacter via le dépôt de l'application concernée ou les coordonnées du développeur.
+        </p>
+      </section>
+    </div>
+
+  </main>
+
+  <footer>
+    <span lang="en">© 2026 Nick Khapatniukovskyi. All rights reserved.</span>
+    <span lang="fr">© 2026 Nick Khapatniukovskyi. Tous droits réservés.</span>
+  </footer>
+
+  <script>
+    function toggleLang() {
+      document.body.classList.toggle("fr");
+      const link = document.getElementById("langLink");
+      link.textContent = document.body.classList.contains("fr") ? "English" : "Français";
+    }
+
+    // Auto-detect French browser language
+    if ((navigator.language || "").toLowerCase().startsWith("fr")) {
+      document.body.classList.add("fr");
+      document.getElementById("langLink").textContent = "English";
+    }
+  </script>
 </body>
 </html>
